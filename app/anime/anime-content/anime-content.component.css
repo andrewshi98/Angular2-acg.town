@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+.anime_header{
+    background: white;
+}
+
+.anime_header .title{
+    color: #303948;
+    height: 50px;
+    padding: 14px 80px;
+    width: 100%;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.anime_header .title h1{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.anime_main{
+    border-top: 1px solid rgb(237, 238, 238);
+    border-bottom: 1px solid rgb(237, 238, 238);
+    background: rgba(245, 245, 245, 0.4);
+    min-height: 280px;
+}
+
+.anime_sidebar{
+    border-right: 1px solid rgb(237, 238, 238);
+    border-bottom: 1px solid rgb(237, 238, 238);
+    background: rgb(255, 255, 255);
+    width: 280px;
+    display: inline-block;
+    text-align: center;
+}
+
+.anime_sidebar img{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    max-width: 204px;
+}
+
+.anime_sidebar .sidebar_row{
+    font-size: 0.85em;
+    border-top: 1px solid rgb(237, 238, 238);
+    text-align: left;
+    padding: 10px;
+    padding-left: 20%;
+    background: #f5f5f8;
+    color: #4996bd;
+}
+
+.sidebar_row .sidebar_row_title{
+    vertical-align: top;
+    display: inline-block;
+    width: 35%;
+}
+.sidebar_row .sidebar_row_content{
+    display: inline-block;
+    width: 60%;
+}
+
+.anime_main_wrap{
+    padding: 10px 35px 0px 35px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 280px);
+}
+
+.anime_main_wrap .anime_subtitle{
+    padding-left: 30px;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 17px;
+    font-family: 'Montserrat',sans-serif;
+}
+.anime_main_wrap .anime_content{
+    background: #fff;
+    min-height: 1em;
+    border-radius: 2px;
+    border: solid 1px #eee;
+    padding: 10px;
+    font-weight: 400;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.linkbox{
+    border: 1px solid rgb(237, 238, 238);
+    background: rgba(245, 245, 245, 0.4);
+    margin: 5px;
+}
+
+.tag_wrap{
+    max-height: 120px;
+    overflow: auto;
+}
+
+.tags{
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+    padding: 1px 10px;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+    .anime_sidebar{
+        width: 100%;
+    }
+    .anime_main_wrap{
+        width: 100%;
+        display: block;
+    }
+}

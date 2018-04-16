@@ -1,0 +1,11 @@
+<div *ngIf="showcomponent" class="animation_download_overlay">
+  <div class="box box-warning animation_download_box">
+    <div (click)="close_download_box()" class="fa fa-times animation_download_close">
+    </div>
+    <div *ngFor="let link of anime_link" class="linkbox">
+      {{ link['RESOURCENAME'] }} <br> {{ link['RESOURCESIZE'] }}
+      <a [href]="sanitize(link['MAGNETLINK'])">磁链下载</a>
+      <a [href]="sanitize(link['THUNDERLINK'])">迅雷下载</a>
+    </div>
+  </div>
+</div>

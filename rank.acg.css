@@ -1,0 +1,47 @@
+* {
+    cursor: default;
+}
+
+.searchload {
+    height: calc(100vh - 120px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+
+/* End of scrollbar */
+
+.content {
+    height: calc(100% - 65px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

@@ -1,0 +1,56 @@
+<div class="anime_header">
+  <div class="title">
+      <h1>{{ animationdata['name'] }}</h1>
+  </div>
+</div>
+<div class="anime_main">
+  <div class="anime_sidebar">
+    <img [src]="'//rank.acg.town/pic/cover/large/' + animeid + '.jpg'">
+    <div class="sidebar_row">
+      <div class="sidebar_row_title">
+        日文名称：
+      </div><div class="sidebar_row_content">{{ animationdata['JAPANESENAME'] }}
+        </div>
+    </div>
+    <div class="sidebar_row">
+        <div class="sidebar_row_title">
+            总集数：
+          </div><div class="sidebar_row_content">{{ animationdata['EPISODECOUNT'] }}集
+        </div>
+    </div>
+    <div class="sidebar_row">
+        <div class="sidebar_row_title">
+            放映日期：
+          </div><div class="sidebar_row_content">{{ animationdata['airdate'] | date:"y年MM月dd日" }}
+        </div>
+    </div>
+    <div class="sidebar_row">
+        <div class="sidebar_row_title">
+            评分：
+          </div><div class="sidebar_row_content">{{ animationdata['ratingscore'] }}
+        </div>
+    </div>
+  </div><div class="anime_main_wrap">
+    <h2 class="anime_subtitle">简介
+    </h2><div class="anime_content">
+        {{ animationdata['summary'] }}
+    </div><h2 class="anime_subtitle">
+      用户标签：
+    </h2><div class="anime_content tag_wrap">
+        <div *ngFor="let animationtag of animationtags" class="tags">
+            {{ animationtag }}
+        </div>
+    </div><h2 class="anime_subtitle">资源
+      </h2><div class="anime_content">
+      <div *ngIf="anime_magnet.length != 0">
+        <div *ngFor="let link of anime_magnet" class="linkbox">
+          {{ link['RESOURCENAME'] }} <br> {{ link['RESOURCESIZE'] }}
+          <a [href]="sanitize(link['MAGNETLINK'])">磁链下载</a>
+          <a [href]="sanitize(link['THUNDERLINK'])">迅雷下载</a>
+        </div>
+      </div><div *ngIf="anime_magnet.length == 0">
+        这部动漫没有下载资源 :3
+      </div>
+    </div>
+  </div>
+</div>

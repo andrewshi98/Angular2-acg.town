@@ -1,0 +1,68 @@
+<div *ngIf="!enableform" [@showoverlay] class="loading">Loading&#8230;</div>
+
+<aside class="main-sidebar">
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- search form (Optional) -->
+    <form #formdata="ngForm" (submit)="Search_onSubmit()" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="searchtext" id="searchtext" class="form-control" placeholder="Search..." ngModel>
+        <span class="input-group-btn">
+                <button type="button" (click)="Search_Cancel()" class="btn btn-flat"><i class="fa fa-times search-icon"></i>
+                </button>
+        </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <li class="header">筛选选项</li>
+      <!-- Optionally, you can add icons to the links -->
+      <li class="sidebar-datepicker-container hidethis">
+        <div class="slidebar-datepicker-title">
+          过滤日期
+        </div>
+        <div class="input-group date datepicker-front">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input (keyup.enter)="Search_onSubmit()" type="text" class="form-control pull-right" id="datepicker-front-content">
+        </div>
+        <div class="fa fa-arrow-right"></div>
+        <div class="input-group date datepicker-end">
+          <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </div>
+          <input (keyup.enter)="Search_onSubmit()" type="text" class="form-control pull-right" id="datepicker-end-content">
+        </div>
+        <!-- /.input group -->
+      </li>
+
+      <div class="slidebar-tagpicker">
+        <div class="form-group">
+          <div class="slidebar-tagpicker-title">
+            过滤标签
+          </div>
+          <div class="tagselector-container">
+              <select class="select2" multiple="multiple" style="width: 100%" id="tagselector"></select>
+          </div>
+        </div>
+        <!-- /.form-group -->
+      </div>
+
+      <div class="submitbutton hidethis">
+          <button (click)="Search_onSubmit()" class="btn btn-block btn-warning" type="button">应用搜索</button>
+      </div>
+      <div class="announcement hidethis">
+          公告：<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;感觉网站如果加了站内看片的功能就有点危险了，最近几天争取把观看链接+下载链接给弄下来。然而应该是不会加入站内观看的功能。<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;贴吧里有同学提了个意见所以在弄观看链接的同时也会开始开发图片搜索番剧功能（贴吧里各种发一张图然后开始问这是啥动漫的人太多了）<br>
+          &nbsp;&nbsp;&nbsp;进了网站甭管好不好求大家回贴吧给评个论水个贴蟹蟹<br>
+      </div>
+    </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

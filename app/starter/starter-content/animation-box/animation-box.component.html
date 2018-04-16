@@ -1,0 +1,18 @@
+<div class="cover">
+  <a [href]="'/anime/'+animation_id">
+    <img src="//rank.acg.town/pic/cover/small/{{animation_id}}.jpg" class="img unselectable" draggable="false" (load)="load_animationinfo()">
+  </a>
+  <div class="cover-overlay">
+    <div class="cover-header">
+      第{{ coverinfo['RANK'] }}名
+    </div>
+    <div class="cover-rating">
+      {{ coverinfo['SCORE'] }}/10
+    </div>
+    <div class="cover-footer">
+      <div class="footer-name">
+          {{ coverinfo['MAINNAME'] }}
+      </div>
+    </div>
+  </div>
+</div>

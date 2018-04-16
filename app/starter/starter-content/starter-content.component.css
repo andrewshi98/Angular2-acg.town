@@ -1,0 +1,45 @@
+.header {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.masonrycontainer {
+    float: left;
+    width: 100vw;
+}
+
+.pagebuttoncontainer {
+    position: absolute;
+    left: calc(50% - 8em);
+    width: 16em;
+    height: 34px;
+    bottom: 17px;
+}
+
+.button {
+    width: 8em;
+    margin: 0px;
+}
+
+.leftbutton {
+    float: left;
+}
+
+.rightbutton {
+    float: right;
+}
+
+.anime_display_wrap{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:767px) {
+    .masonrycontainer {
+        float: left;
+        width: 100vw;
+        min-width: 1px;
+    }
+}

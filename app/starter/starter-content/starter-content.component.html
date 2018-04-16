@@ -1,0 +1,25 @@
+<div class="content-wrapper searchload">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1 class="content-title" [ngStyle]="content_title_style">
+      {{ content_title_text }}
+      <small class="content-title-small" [ngStyle]="content_title_small">搜索结果: {{ currentpage }}/{{ totalpage }}页</small>
+    </h1>
+  </section>
+
+  <!-- Main content -->
+  <section *ngIf="returnstate == 200 || returnstate == 300" class="content custom-scrollbar">
+    <!-- Animation Box -->
+    <div class="pagebuttoncontainer" *ngIf="returnstate == 200">
+        <button *ngIf="currentpage != 1" type="button" (click)="changepage(-1)" class="btn btn-block btn-warning button leftbutton">上一页</button>
+        <button *ngIf="currentpage != totalpage" type="button" (click)="changepage(1)" class="btn btn-block btn-warning button rightbutton">下一页</button>
+    </div>
+    <masonry [useImagesLoaded]="true" class="row masonrycontainer" id="masonrycontainer">
+      <masonry-brick *ngFor="let animation of searchresult" class="anime_display_wrap">
+        <app-animation-box [animation_id]="animation"></app-animation-box>
+      </masonry-brick>
+    </masonry>
+    <!-- End of Animation Box -->
+  </section>
+  <!-- /.content -->
+</div>
